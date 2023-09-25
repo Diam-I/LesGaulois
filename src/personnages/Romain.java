@@ -16,9 +16,9 @@ public class Romain {
 	}
 	private String prendreParole() {
 		// TODO Auto-generated method stub
-		return null;
+		return "Le romain " + nom + " : ";
 	}
-	void recevoirCoup(int forceCoup) {
+	public void recevoirCoup(int forceCoup) {
 		force -= forceCoup;
 		if (force > 0) {
 			parler("Aie");

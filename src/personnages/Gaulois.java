@@ -3,10 +3,9 @@ package personnages;
 public class Gaulois {
 	private String nom;
 	private int force;
-	private String effetPotion;
+	private int effetPotion = 1 ;
 
 	public Gaulois(String nom, int force) {
-		super();
 		this.nom = nom;
 		this.force = force;
 	}
@@ -22,7 +21,6 @@ public class Gaulois {
 	private String prendreParole() {
 		return "Le gaulois " + nom + " : ";
 	}
-
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans la machoire de " + romain.getNom());
 		romain.recevoirCoup(force / 3);
@@ -34,7 +32,13 @@ public class Gaulois {
 	}
 
 	public static void main(String[] args) {
+		Gaulois asterix = new Gaulois("Astérix",8);
+		Gaulois obelix = new Gaulois("Obélix", 12);
+		
+		String paroleAsterix = asterix.prendreParole();
+		System.out.println(paroleAsterix);
+		
+		asterix.parler("Bonjour ! ");
 
 	}
-
 }
