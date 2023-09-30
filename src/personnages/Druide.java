@@ -22,7 +22,7 @@ public class Druide {
 		}
 		private String prendreParole() {
 		return "Le druide " + nom + " : ";
-		}
+		} 
 		public void preparePotion() {
 			Random rnd = new Random(); 
 			forcePotion = effetPotionMin + rnd.nextInt(effetPotionmax - effetPotionMin); 
