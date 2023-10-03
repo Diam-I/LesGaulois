@@ -94,7 +94,7 @@ public class Romain {
 					System.out.println("Equipement casque");
 					resistanceEquipement += 5;
 				}
-				i += i;
+				i += 1;
 			}
 			texte += resistanceEquipement + "!";
 		}
