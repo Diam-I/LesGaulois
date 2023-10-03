@@ -23,7 +23,7 @@ public class Druide {
 		private String prendreParole() {
 		return "Le druide " + nom + " : ";
 		} 
-		public void preparePotion() {
+		public void preparerPotion() {
 			Random rnd = new Random(); 
 			forcePotion = effetPotionMin + rnd.nextInt(effetPotionmax - effetPotionMin); 
 			if(forcePotion > 7) {
@@ -35,7 +35,7 @@ public class Druide {
 		
 		public static void main(String[] args) {
 			Druide panoramix = new Druide("Panoramix",5,10) ; 
-			panoramix.preparePotion();
+			panoramix.preparerPotion();
 			
 		}
 		
