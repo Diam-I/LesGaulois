@@ -6,7 +6,6 @@ public class Romain {
 	
 	private Equipement[] equipements;
 	private int nbEquipement;
-	//
 	public boolean vainqueur = true   ;
 
 	public Romain(String nom, int force) {

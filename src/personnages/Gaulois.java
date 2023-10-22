@@ -31,20 +31,27 @@ public class Gaulois {
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
 		Equipement[] trophee = romain.recevoirCoup((force / 3)*effetPotion);
 		
-		
-//		if (((force / 3)*effetPotion)>= romain.getForce()) {
-//			force = 0; 
-//			
-//		}
-//		else {
-//			force -= (force / 3)*effetPotion ;
-//		}
-		
 
 		for (int i = 0; trophee != null && i < trophee.length; i++, nbtrophees++) {
 			this.trophees[nbtrophees] = trophee[i];
 		}
 
+	}
+	
+	public void faireUneDonnation(Musee musee, Gaulois gaulois) {
+		if (nbtrophees== 0 ) {
+			System.out.println("Le gaulois "+nom+" ne possède aucun trophée !");
+		}
+		else {
+			gaulois.prendreParole();
+			gaulois.parler("Je donne au musée tous mes trophées :");
+			for (int i=0 ; i<nbtrophees;i++) {
+				//musee.donnerTrophee(gaulois, trophees[i]);
+				
+				parler("- "+ trophees[i]);
+			}
+		}
+		trophees = new Equipement[100];
 	}
 
 	@Override
