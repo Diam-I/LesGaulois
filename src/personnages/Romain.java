@@ -4,9 +4,10 @@ public class Romain {
 	private String nom;
 	private int force;
 	
-	private int forceInitiale;
 	private Equipement[] equipements;
 	private int nbEquipement;
+	//
+	public boolean vainqueur = true   ;
 
 	public Romain(String nom, int force) {
 
@@ -63,20 +64,31 @@ public class Romain {
 	}
 
 	public Equipement[] recevoirCoup(int forceCoup) {
-		Equipement[] equipementEjecte = null;
+		
+		Equipement[] equipementEjecte;
 		// précondition
 		assert force > 0;
 		int oldForce = force;
 		forceCoup = calculResistanceEquipement(forceCoup);
+
 		force -= forceCoup;
 		
-		if (force == 0) {
+		if (force > 0) {
 			parler("Aïe");
+			equipementEjecte=new Equipement[0];
 		} else {
 			equipementEjecte = ejecterEquipement();
 			parler("J'abandonne...");
+			
+			//
+			vainqueur = false ;
+	
 		}
+		
+		System.out.println(vainqueur);
+		
 		// post condition la force a diminuée
+		
 		assert force < oldForce;
 		return equipementEjecte;
 	}
@@ -99,7 +111,8 @@ public class Romain {
 			texte += resistanceEquipement + "!";
 		}
 		parler(texte);
-		forceCoup -= resistanceEquipement;
+		forceCoup += resistanceEquipement;
+		
 		return forceCoup;
 	}
 
