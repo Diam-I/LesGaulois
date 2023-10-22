@@ -98,14 +98,13 @@ public class Romain {
 		int resistanceEquipement = 0;
 		if ((nbEquipement != 0)) {
 			texte += "\nMais heureusement, grace à mon équipement sa force est diminué de ";
-			for (int i = 0; i < nbEquipement;) {
+			for (int i = 0; i < nbEquipement;i++) {
 				if ((equipements[i] != null && equipements[i].equals(Equipement.BOUCLIER))) {
 					resistanceEquipement += 8;
 				} else {
 					System.out.println("Equipement casque");
 					resistanceEquipement += 5;
 				}
-				i += 1;
 			}
 			texte += resistanceEquipement + "!";
 		}

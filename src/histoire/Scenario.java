@@ -3,6 +3,7 @@ package histoire;
 import personnages.Druide;
 import personnages.Equipement;
 import personnages.Gaulois;
+import personnages.Musee;
 import personnages.Romain;
 
 public class Scenario {
@@ -27,17 +28,15 @@ public class Scenario {
 			asterix.frapper(minus);
 		} while (minus.vainqueur);
 		
-		//while (minus.getForce() > 0);
 		milexcus.parler("UN GAU... UN GAUGAU...");
 		do {
 			asterix.frapper(milexcus);
 		} while (milexcus.getForce() > 0);
 		
-//		Partie a decommenter
 		
-//		Musee musee = new Musee();
-//		asterix.faireUneDonnation(musee);
+		Musee musee = new Musee();
+		asterix.faireUneDonnation(musee);
 
 	}
-
+	
 }

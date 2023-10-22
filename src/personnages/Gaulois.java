@@ -38,22 +38,22 @@ public class Gaulois {
 
 	}
 	
-	public void faireUneDonnation(Musee musee, Gaulois gaulois) {
+	public void faireUneDonnation(Musee musee) {
 		if (nbtrophees== 0 ) {
 			System.out.println("Le gaulois "+nom+" ne possède aucun trophée !");
 		}
 		else {
-			gaulois.prendreParole();
-			gaulois.parler("Je donne au musée tous mes trophées :");
+			prendreParole();
+			parler("Je donne au musée tous mes trophées :");
 			for (int i=0 ; i<nbtrophees;i++) {
-				//musee.donnerTrophee(gaulois, trophees[i]);
+				// musee.donnerTrophee(trophees[i]);
 				
-				parler("- "+ trophees[i]);
+				System.out.println("- "+ trophees[i]);
 			}
 		}
 		trophees = new Equipement[100];
+	
 	}
-
 	@Override
 	public String toString() {
 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";

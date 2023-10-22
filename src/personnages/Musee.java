@@ -10,7 +10,7 @@ public class Musee {
 		nbTrophee = 0;
 	}
 	
-	public void donnerTrophee(Gaulois gaulois ,Trophee trophee) {
+	public void donnerTrophee(Trophee trophee) {
 		trophees [nbTrophee] = trophee;
 		nbTrophee ++ ;
 		
